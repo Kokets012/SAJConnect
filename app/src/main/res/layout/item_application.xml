@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:elevation="3dp"
+    android:padding="16dp"
+    android:layout_marginBottom="10dp"
+    android:layout_margin="4dp">
+
+    <TextView
+        android:id="@+id/applicationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opportunity Title"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#111827" />
+
+    <!-- 🔹 Status label -->
+    <TextView
+        android:id="@+id/applicationStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"
+        android:textColor="#6B7280" />
+
+    <TextView
+        android:id="@+id/applicationMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your message to employer"
+        android:layout_marginTop="4dp"
+        android:textColor="#374151" />
+
+    <TextView
+        android:id="@+id/applicationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submitted: 10 Oct 2025"
+        android:textColor="#6B7280"
+        android:layout_marginTop="4dp" />
+
+    <Button
+        android:id="@+id/cancelApplicationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel Application"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#DC2626"
+        android:layout_marginTop="10dp" />
+</LinearLayout>

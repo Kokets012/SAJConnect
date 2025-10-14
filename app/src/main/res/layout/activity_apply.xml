@@ -1,0 +1,99 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F4F6"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/applyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apply for Opportunity"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/opportunityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#2563EB"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/applicantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:backgroundTint="#2563EB"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <EditText
+            android:id="@+id/applicantMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Short message to employer"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:backgroundTint="#2563EB"
+            android:padding="12dp"
+            android:layout_marginBottom="10dp" />
+
+        <Button
+            android:id="@+id/uploadCVButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload CV"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="10dp" />
+
+        <TextView
+            android:id="@+id/fileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No file selected"
+            android:textColor="#6B7280"
+            android:paddingBottom="10dp" />
+
+        <Button
+            android:id="@+id/submitApplication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Application"
+            android:backgroundTint="#16A34A"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF" />
+
+        <ProgressBar
+            android:id="@+id/uploadProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            style="?android:attr/progressBarStyleLarge" />
+
+
+    </LinearLayout>
+</ScrollView>

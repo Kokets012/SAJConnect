@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307855543327",
+    "project_id": "sajconnect-st10276163",
+    "storage_bucket": "sajconnect-st10276163.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307855543327:android:ab3538f9b29ac46a2f192a",
+        "android_client_info": {
+          "package_name": "com.example.sajconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2ybvONeJWFyzJ478UZtg2ngQXMwolTjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome!"
+        android:textSize="24sp"
+        android:padding="16dp" />
+
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Profile Settings"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="#2563EB"
+        android:textColor="#FFFFFF"/>
+
+
+    <Button
+        android:id="@+id/searchOpportunitiesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔍 Search Job Opportunities"
+        android:backgroundTint="#2563EB"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp" />
+
+
+    <Button
+        android:id="@+id/myApplicationsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="📋View My Applications"
+        android:backgroundTint="#2563EB"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp" />
+
+
+
+    <Button
+        android:id="@+id/viewOpportunities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post Job Opportunities"
+        android:backgroundTint="#2563EB"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="10dp"/>
+
+
+    <Button
+        android:id="@+id/logoutButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Logout" />
+
+
+</LinearLayout>
