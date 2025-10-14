@@ -61,3 +61,9 @@ Author
     Module: OPSC6312 – Mobile App Development
     Institution: [Rosebank College]
     Year: 2025
+
+Links 
+
+    GitHub link: https://github.com/Kokets012/SAJConnect/tree/main 
+    
+    You tube channel link: https://www.youtube.com/channel/UCrE9VB6KPEerY-w2WU4rYTQ 
