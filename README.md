@@ -55,3 +55,9 @@ Design Considerations
     The data models are based on Opportunities, Users, and Applications, following the design document.
     Unit testing is handled through GitHub Actions to ensure consistent builds.
 
+Author
+
+    Student: Koketso Leopeng
+    Module: OPSC6312 – Mobile App Development
+    Institution: [Rosebank College]
+    Year: 2025
