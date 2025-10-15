@@ -27,9 +27,11 @@
             android:layout_height="wrap_content"
             android:hint="Email address"
             android:inputType="textEmailAddress"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"/>
 
         <EditText
             android:id="@+id/passwordField"
@@ -37,8 +39,11 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
+            android:padding="12dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
             android:backgroundTint="#2563EB"
-            android:padding="12dp"/>
+            />
 
         <TextView
             android:id="@+id/passwordHint"

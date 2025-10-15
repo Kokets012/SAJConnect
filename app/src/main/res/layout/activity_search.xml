@@ -9,7 +9,12 @@
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search by title…" />
+        android:queryHint="Search opportunities..."
+        android:background="#FFFFFF"
+        android:iconifiedByDefault="false"
+        android:layout_marginBottom="10dp"
+        android:padding="8dp" />
+
 
     <LinearLayout
         android:orientation="horizontal"

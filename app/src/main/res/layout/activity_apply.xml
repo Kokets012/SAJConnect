@@ -35,9 +35,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Full Name"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"
+            />
 
         <EditText
             android:id="@+id/applicantMessage"
@@ -46,9 +49,12 @@
             android:hint="Short message to employer"
             android:inputType="textMultiLine"
             android:lines="4"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp" />
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"
+            />
 
         <Button
             android:id="@+id/uploadCVButton"

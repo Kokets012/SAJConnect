@@ -25,7 +25,8 @@
         android:text="Status: Pending"
         android:textStyle="bold"
         android:layout_marginTop="4dp"
-        android:textColor="#6B7280" />
+        android:textColor="#111827"
+        />
 
     <TextView
         android:id="@+id/applicationMessage"
@@ -33,14 +34,15 @@
         android:layout_height="wrap_content"
         android:text="Your message to employer"
         android:layout_marginTop="4dp"
-        android:textColor="#374151" />
+        android:textColor="#111827"
+        />
 
     <TextView
         android:id="@+id/applicationDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submitted: 10 Oct 2025"
-        android:textColor="#6B7280"
+        android:textColor="#111827"
         android:layout_marginTop="4dp" />
 
     <Button
@@ -49,6 +51,6 @@
         android:layout_height="wrap_content"
         android:text="Cancel Application"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#DC2626"
+        android:backgroundTint="#2563EB"
         android:layout_marginTop="10dp" />
 </LinearLayout>

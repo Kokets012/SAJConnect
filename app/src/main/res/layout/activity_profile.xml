@@ -28,18 +28,24 @@
             android:hint="Email"
             android:inputType="textEmailAddress"
             android:enabled="false"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"
+            />
 
         <EditText
             android:id="@+id/displayNameField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Display Name"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"
+            />
 
         <EditText
             android:id="@+id/newPasswordField"
@@ -47,9 +53,12 @@
             android:layout_height="wrap_content"
             android:hint="New Password (optional)"
             android:inputType="textPassword"
-            android:backgroundTint="#2563EB"
             android:padding="12dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="10dp"
+            android:textColor="#111827"
+            android:textColorHint="#6B7280"
+            android:backgroundTint="#2563EB"
+            />
 
         <Button
             android:id="@+id/updateButton"
@@ -76,7 +85,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Logout"
-            android:backgroundTint="#E11D48"
+            android:backgroundTint="#2563EB"
             android:textColor="#FFFFFF"
             android:padding="12dp"/>
 
