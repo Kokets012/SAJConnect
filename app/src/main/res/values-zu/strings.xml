@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Name -->
+    <string name="app_name">i-SAJ Connect</string>
+
+    <!-- Login Screen -->
+    <string name="emailLogin">I-imeyili</string>
+    <string name="passwordLogin">Iphasiwedi</string>
+    <string name="loginButton">Ngena ngemvume</string>
+    <string name="registerRedirect">Awuna-akhawunti? Bhalisa lapha</string>
+    <string name="btn_google_signin">Ngena nge-Google</string>
+
+    <!-- Dashboard -->
+    <string name="welcome">Siyakwamukela</string>
+    <string name="find_job">Thola Umsebenzi Wakho Wamaphupho</string>
+    <string name="view_opportunities">Buka Amathuba</string>
+    <string name="my_applications">Izicelo Zami</string>
+    <string name="profile">Iphrofayili</string>
+
+    <!-- Opportunities -->
+    <string name="available_opportunities">Amathuba Atholakalayo</string>
+    <string name="add_opportunity">Engeza Ithuba</string>
+    <string name="sync">Vumelanisa</string>
+    <string name="home">Ikhaya</string>
+
+    <!-- Add Opportunity -->
+    <string name="titleField">Isihloko</string>
+    <string name="categoryField">Isigaba</string>
+    <string name="locationField">Indawo</string>
+    <string name="descriptionField">Incazelo</string>
+    <string name="saveButton">Londoloza</string>
+
+    <!-- Common Messages -->
+    <string name="please_fill_all_fields">Sicela ugcwalise zonke izinkambu</string>
+    <string name="saved_successfully">Kulondoloziwe ngempumelelo! ✅</string>
+    <string name="error_occurred">Kwenzeke iphutha</string>
+    <string name="no_internet">Ayikho inethiwekhi ye-inthanethi</string>
+
+    <!-- Opportunity Items -->
+    <string name="applyButton">Faka isicelo</string>
+    <string name="item_category">Isigaba: %s</string>
+    <string name="item_location">Indawo: %s</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Hlela iphrofayili</string>
+    <string name="logout">Phuma</string>
+
+    <string name="login_successful">Ungene ngemvume! ✅</string>
+    <string name="registration_successful">Ubhalise ngempumelelo! ✅</string>
+    <string name="google_sign_in_successful">Ungene nge-Google ngempumelelo! ✅</string>
+    <string name="opportunity_added">Ithuba lengeziwe ngempumelelo! ✅</string>
+    <string name="loading">Ilayisha...</string>
+    <string name="logging_in">Iyangena...</string>
+    <string name="saving">Iyalondoloza...</string>
+    <string name="signing_in">Isayina ngemvume...</string>
+
+    <!-- Notifications -->
+    <string name="new_opportunity_available">Ithuba elisha liyatholakala!</string>
+</resources>

@@ -58,6 +58,14 @@
             android:backgroundTint="#2563EB"
             />
 
+        <EditText
+            android:id="@+id/locationField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
         <Button
             android:id="@+id/saveButton"
             android:layout_width="match_parent"

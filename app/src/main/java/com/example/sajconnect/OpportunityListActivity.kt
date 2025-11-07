@@ -5,27 +5,36 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.firestore.FirebaseFirestore
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.launch
 
 class OpportunityListActivity : AppCompatActivity() {
 
-    private lateinit var db: FirebaseFirestore
     private lateinit var listContainer: LinearLayout
     private lateinit var addButton: Button
+    private lateinit var repository: OpportunityRepository
+    private lateinit var syncButton: Button
+    private lateinit var offlineIndicator: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_opportunity_list)
 
-        db = FirebaseFirestore.getInstance()
+        repository = OpportunityRepository(this)
         listContainer = findViewById(R.id.listContainer)
         addButton = findViewById(R.id.addButton)
+        syncButton = findViewById(R.id.syncButton)
 
-        loadOpportunities()
-
-        addButton.setOnClickListener {
-            startActivity(Intent(this, AddOpportunityActivity::class.java))
+        // Create offline indicator
+        offlineIndicator = TextView(this).apply {
+            text = "⚠️ Offline Mode - Showing cached data"
+            setPadding(50, 20, 50, 20)
+            textSize = 14f
+            setBackgroundColor(0x33FFA500) // Light orange background
         }
+
+        setupUI()
+        loadOpportunities()
 
         val homeButton = findViewById<Button>(R.id.homeButton)
         homeButton.setOnClickListener {
@@ -33,47 +42,102 @@ class OpportunityListActivity : AppCompatActivity() {
             finish()
         }
 
-
-        // Hide the default ActionBar
         supportActionBar?.hide()
     }
 
-    private fun loadOpportunities() {
-        listContainer.removeAllViews()
+    private fun setupUI() {
+        addButton.setOnClickListener {
+            startActivity(Intent(this, AddOpportunityActivity::class.java))
+        }
 
-        db.collection("opportunities")
-            .orderBy("timestamp", com.google.firebase.firestore.Query.Direction.DESCENDING)
-            .get()
-            .addOnSuccessListener { docs ->
-                for (doc in docs) {
-                    val view = layoutInflater.inflate(R.layout.item_opportunity, null)
-                    val title = doc.getString("title") ?: "Untitled"
-                    val category = doc.getString("category") ?: "Uncategorized"
-                    val description = doc.getString("description") ?: "No description"
-
-                    view.findViewById<TextView>(R.id.itemTitle).text = title
-                    view.findViewById<TextView>(R.id.itemCategory).text = category
-                    view.findViewById<TextView>(R.id.itemDescription).text = description
-
-                    val applyBtn = view.findViewById<Button>(R.id.applyButton)
-                    applyBtn.setOnClickListener {
-                        val intent = Intent(this, ApplyActivity::class.java)
-                        intent.putExtra("opportunityId", doc.id)
-                        intent.putExtra("opportunityTitle", title)
-                        startActivity(intent)
-                    }
-
-                    listContainer.addView(view)
-                }
-            }
-            .addOnFailureListener {
-                Toast.makeText(this, "Error loading data: ${it.message}", Toast.LENGTH_SHORT).show()
-            }
+        syncButton.setOnClickListener {
+            refreshData()
+        }
     }
 
+    private fun loadOpportunities() {
+        repository.loadOpportunities()
+
+        // Observe the opportunities flow
+        lifecycleScope.launch {
+            repository.opportunities.collect { opportunities ->
+                displayOpportunities(opportunities)
+                updateOfflineIndicator()
+            }
+        }
+    }
+
+    private fun updateOfflineIndicator() {
+        if (!repository.isOnline() && repository.hasCachedData()) {
+            offlineIndicator.text = "⚠️ Offline Mode - Showing cached data"
+            // Add indicator if not already added
+            if (offlineIndicator.parent == null) {
+                listContainer.addView(offlineIndicator, 0)
+            }
+            offlineIndicator.visibility = TextView.VISIBLE
+        } else {
+            offlineIndicator.visibility = TextView.GONE
+        }
+    }
+
+    private fun refreshData() {
+        if (repository.isOnline()) {
+            repository.manualSync()
+            Toast.makeText(this, "Syncing with server...", Toast.LENGTH_SHORT).show()
+        } else {
+            Toast.makeText(this, "No internet connection", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun displayOpportunities(opportunities: List<Opportunity>) {
+        listContainer.removeAllViews()
+
+        // Add offline indicator if needed
+        updateOfflineIndicator()
+
+        if (opportunities.isEmpty()) {
+            val emptyView = TextView(this).apply {
+                text = if (repository.isOnline()) {
+                    "No opportunities found. Pull to refresh."
+                } else {
+                    "No cached opportunities. Connect to internet to load data."
+                }
+                setPadding(50, 50, 50, 50)
+                textSize = 16f
+                gravity = android.view.Gravity.CENTER
+            }
+            listContainer.addView(emptyView)
+            return
+        }
+
+        for (opportunity in opportunities) {
+            val view = layoutInflater.inflate(R.layout.item_opportunity, null)
+
+            view.findViewById<TextView>(R.id.itemTitle).text = opportunity.title
+            view.findViewById<TextView>(R.id.itemCategory).text = opportunity.category
+            view.findViewById<TextView>(R.id.itemDescription).text = opportunity.description
+
+            // Show location if available
+            val locationView = view.findViewById<TextView>(R.id.itemLocation)
+            locationView?.text = opportunity.location ?: "Location not specified"
+
+            val applyBtn = view.findViewById<Button>(R.id.applyButton)
+            applyBtn.setOnClickListener {
+                val intent = Intent(this, ApplyActivity::class.java)
+                intent.putExtra("opportunityId", opportunity.id)
+                intent.putExtra("opportunityTitle", opportunity.title)
+                startActivity(intent)
+            }
+
+            listContainer.addView(view)
+        }
+    }
 
     override fun onResume() {
         super.onResume()
-        loadOpportunities() // refresh after adding new ones
+        loadOpportunities() // Refresh when returning to this screen
     }
+
+
+
 }

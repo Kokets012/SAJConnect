@@ -15,6 +15,18 @@
         android:textColor="#1F2937"
         android:paddingBottom="10dp"/>
 
+    <!-- Offline Indicator -->
+    <TextView
+        android:id="@+id/offlineIndicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Offline Mode - Showing cached data"
+        android:background="#FFF3CD"
+        android:textColor="#856404"
+        android:padding="12dp"
+        android:visibility="gone"
+        android:layout_marginBottom="10dp" />
+
     <Button
         android:id="@+id/addButton"
         android:layout_width="match_parent"
@@ -24,13 +36,33 @@
         android:textColor="#FFFFFF"
         android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/homeButton"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home"
-        android:backgroundTint="#2563EB"
-        android:textColor="#FFFFFF" />
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home"
+            android:backgroundTint="#2563EB"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="5dp" />
+
+        <Button
+            android:id="@+id/syncButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sync"
+            android:backgroundTint="#10B981"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="5dp" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"

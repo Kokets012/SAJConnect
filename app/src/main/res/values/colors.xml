@@ -14,4 +14,8 @@
     <color name="text_hint">#6B7280</color>
 
 
+    <!-- Add this missing color -->
+    <color name="colorAccent">#03DAC5</color>
+
+
 </resources>

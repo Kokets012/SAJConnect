@@ -1,67 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+    android:padding="20dp"
     android:background="#E0F2FE">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:padding="32dp">
+        android:orientation="vertical">
 
+        <!-- Welcome Header - FIXED -->
         <TextView
-            android:id="@+id/loginTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Welcome Back!"
+            android:text="@string/welcome"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:textColor="#0F172A"
-            android:paddingBottom="16dp"/>
+            android:gravity="center"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="#0F172A" />
 
-        <EditText
-            android:id="@+id/emailLogin"
+        <!-- Email Field -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="12dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="#111827"
-            android:textColorHint="#6B7280"
-            android:backgroundTint="#2563EB"
-            />
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="#2563EB"
+            app:hintTextColor="#2563EB">
 
-        <EditText
-            android:id="@+id/passwordLogin"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/emailLogin"
+                android:inputType="textEmailAddress"
+                android:textColor="#111827" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Field - FIXED -->
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="12dp"
-            android:textColor="#111827"
-            android:textColorHint="#6B7280"
-            android:backgroundTint="#2563EB"
-            />
+            android:layout_marginBottom="24dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxStrokeColor="#2563EB"
+            app:hintTextColor="#2563EB">
 
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/passwordLogin"
+                android:inputType="textPassword"
+                android:textColor="#111827" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Login Button - FIXED -->
         <Button
             android:id="@+id/loginButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login"
+            android:layout_height="55dp"
+            android:text="@string/loginButton"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:backgroundTint="#0EA5E9"
             android:textColor="#FFFFFF"
-            android:layout_marginTop="16dp"
-            android:padding="12dp"/>
+            android:layout_marginBottom="20dp" />
 
+        <!-- Divider -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#6B7280"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OR"
+                android:paddingHorizontal="16dp"
+                android:background="#E0F2FE"
+                android:layout_centerInParent="true"
+                android:textColor="#6B7280" />
+
+        </RelativeLayout>
+
+        <!-- Google Sign-In Button - FIXED -->
+        <Button
+            android:id="@+id/btn_google_signin"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/btn_google_signin"
+            android:textSize="16sp"
+            android:drawablePadding="12dp"
+            android:background="@drawable/button_google_background"
+            android:textColor="#111827"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Register Redirect - FIXED -->
         <TextView
             android:id="@+id/registerRedirect"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Don't have an account? Register"
+            android:text="@string/registerRedirect"
+            android:gravity="center"
             android:textColor="#0EA5E9"
-            android:paddingTop="16dp"/>
+            android:textStyle="bold"
+            android:padding="12dp" />
+
     </LinearLayout>
 </ScrollView>

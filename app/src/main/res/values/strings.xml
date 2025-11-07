@@ -1,3 +1,63 @@
 <resources>
-    <string name="app_name">SajConnect</string>
+    <string name="app_name">SAJ Connect</string>
+
+    <!-- Login Screen -->
+    <string name="emailLogin">Email</string>
+    <string name="passwordLogin">Password</string>
+    <string name="loginButton">Login</string>
+    <string name="registerRedirect">Don\'t have an account? Register here</string>
+    <string name="btn_google_signin">Sign in with Google</string>
+
+    <!-- Dashboard -->
+    <string name="welcome">Welcome</string>
+    <string name="find_job">Find Your Dream Job</string>
+    <string name="view_opportunities">View Opportunities</string>
+    <string name="my_applications">My Applications</string>
+    <string name="profile">Profile</string>
+
+    <!-- Opportunities -->
+    <string name="available_opportunities">Available Opportunities</string>
+    <string name="add_opportunity">Add Opportunity</string>
+    <string name="sync">Sync</string>
+    <string name="home">Home</string>
+
+    <!-- Add Opportunity -->
+    <string name="titleField">Title</string>
+    <string name="categoryField">Category</string>
+    <string name="locationField">Location</string>
+    <string name="descriptionField">Description</string>
+    <string name="saveButton">Save</string>
+
+    <!-- Common Messages -->
+    <string name="please_fill_all_fields">Please fill all fields</string>
+    <string name="saved_successfully">Saved successfully! ✅</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="no_internet">No internet connection</string>
+
+    <!-- Opportunity Items -->
+    <string name="applyButton">Apply</string>
+    <string name="item_category">Category: %s</string>
+    <string name="item_location">Location: %s</string>
+
+    <!-- Profile -->
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+
+    <!-- Notifications -->
+    <string name="new_opportunity_available">New opportunity available!</string>
+
+
+    <string name="login_successful">Login successful! ✅</string>
+    <string name="registration_successful">Registration successful! ✅</string>
+    <string name="google_sign_in_successful">Google sign in successful! ✅</string>
+    <string name="opportunity_added">Opportunity added successfully! ✅</string>
+    <string name="loading">Loading...</string>
+    <string name="logging_in">Logging in...</string>
+    <string name="saving">Saving...</string>
+    <string name="signing_in">Signing in...</string>
+
+
+
+    <!-- Google Sign In -->
+    <string name="default_web_client_id">307855543327-udlatu5pfb932cubthjt10v098ipdb8p.apps.googleusercontent.com</string>
 </resources>

@@ -34,6 +34,8 @@
         android:paddingTop="4dp"
         android:textColor="#374151"/>
 
+
+
     <Button
         android:id="@+id/applyButton"
         android:layout_width="wrap_content"
@@ -42,4 +44,15 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#2563EB"
         android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/itemLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="8dp"/>
+
+
 </LinearLayout>
